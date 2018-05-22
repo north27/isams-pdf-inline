@@ -19,7 +19,7 @@ chrome.webRequest.onHeadersReceived.addListener((details) => {
     }
 
 },
-{urls: ["*://*isams*/"]},
+{urls: ["*://*.isams.co.uk/*"]},
 ["responseHeaders","blocking"]);
 
 function findInHeaders(headers, name) {
