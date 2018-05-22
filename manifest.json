@@ -1,12 +1,12 @@
 {
     "name": "Display iSAMS PDF files inline",
     "version": "1.0.0",
-    "description": "Force any PDF file stored in iSAMS to be displayed in-browser regardless of disposition or content type",
+    "description": "Force any PDF file stored in iSAMS (hosted) to be displayed in-browser regardless of disposition or content type",
     "manifest_version": 2,
     "permissions": [
         "webRequest",
         "webRequestBlocking",
-        "*://*isams*/"
+        "*://*.isams.co.uk/*"
     ],
     "browser_action": {
         "default_popup": "popup.html",
