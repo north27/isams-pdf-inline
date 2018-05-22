@@ -1,0 +1,23 @@
+{
+    "name": "North27 PDF Inline for iSAMS",
+    "version": "1.0.0",
+    "description": "Force any PDF downloaded from iSAMS to be displayed in-browser regardless of disposition or content type",
+    "manifest_version": 2,
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "*://*isams*/"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "North27 PDF Inline for iSAMS",
+        "default_icon": "pdfinline.png"
+    },
+    "background" : {
+        "scripts" : ["background.js"],
+        "persistent": true
+    },
+    "icons": {
+       "128": "pdfinline.png"
+    }
+  }
