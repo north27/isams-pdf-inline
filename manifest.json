@@ -12,7 +12,7 @@
     "browser_action": {
         "default_popup": "popup.html",
         "default_title": "Display iSAMS PDF files inline",
-        "default_icon": "pdfinline.png"
+        "default_icon": "icon128.png"
     },
     "background" : {
         "scripts" : ["background.js"],
@@ -21,6 +21,6 @@
     "icons": { 
         "16": "icon16.png",
         "48": "icon48.png",
-        "128": "icon128.png"
+        "128": "pdfinline.png"
     }
   }
