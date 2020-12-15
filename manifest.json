@@ -1,6 +1,6 @@
 {
     "name": "Display iSAMS PDF files inline",
-    "version": "1.1.0",
+    "version": "1.1.9",
     "description": "Force any PDF file stored in iSAMS (hosted) to be displayed in-browser regardless of disposition or content type",
     "manifest_version": 2,
     "homepage_url": "https://north27.co.uk",
@@ -8,20 +8,22 @@
         "webRequest",
         "webRequestBlocking",
         "*://*.isams.co.uk/*",
-        "*://*.isams.cloud/*"
+        "*://*.isams.cloud/*",
+        "*://*.halcyonschool.com/*"
     ],
     "browser_action": {
         "default_popup": "popup.html",
         "default_title": "Display iSAMS PDF files inline",
-        "default_icon": "icon128.png"
+        "default_icon": "n27_icon_128.png"
     },
     "background" : {
         "scripts" : ["background.js"],
         "persistent": true
     },
     "icons": { 
-        "16": "icon16.png",
-        "48": "icon48.png",
-        "128": "icon128.png"
+        "16": "n27_icon_16.png",
+        "32": "n27_icon_32.png",
+        "48": "n27_icon_48.png",
+        "128": "n27_icon_128.png"
     }
   }
