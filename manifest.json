@@ -1,29 +1,49 @@
 {
+    "manifest_version": 3,
     "name": "Display iSAMS PDF files inline",
-    "version": "1.1.9",
-    "description": "Force any PDF file stored in iSAMS (hosted) to be displayed in-browser regardless of disposition or content type",
-    "manifest_version": 2,
+    "version": "1.2.0",
+    "description": "Force any PDF file stored in iSAMS to be displayed in-browser regardless of the default content-disposition.",
     "homepage_url": "https://north27.co.uk",
     "permissions": [
-        "webRequest",
-        "webRequestBlocking",
-        "*://*.isams.co.uk/*",
-        "*://*.isams.cloud/*",
-        "*://*.halcyonschool.com/*"
+        "storage",
+        "activeTab",
+        "declarativeNetRequest",
+        "declarativeNetRequestWithHostAccess"
     ],
-    "browser_action": {
+    "host_permissions": [
+        "*://*.isams.co.uk/*",
+        "*://*.isams.cloud/*"
+    ],
+    "action": {
         "default_popup": "popup.html",
-        "default_title": "Display iSAMS PDF files inline",
-        "default_icon": "n27_icon_128.png"
+        "default_icon": {
+            "16": "img/n27_icon_16.png",
+            "32": "img/n27_icon_32.png",
+            "48": "img/n27_icon_48.png",
+            "128": "img/n27_icon_128.png"
+        },
+        "default_width": 400,
+        "default_height": 600
     },
-    "background" : {
-        "scripts" : ["background.js"],
-        "persistent": true
+    "background": {
+        "service_worker": "js/background.js"
     },
-    "icons": { 
-        "16": "n27_icon_16.png",
-        "32": "n27_icon_32.png",
-        "48": "n27_icon_48.png",
-        "128": "n27_icon_128.png"
+    "icons": {
+        "16": "img/n27_icon_16.png",
+        "32": "img/n27_icon_32.png",
+        "48": "img/n27_icon_48.png",
+        "128": "img/n27_icon_128.png"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self';"
+    },
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ruleset_1",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
     }
-  }
+}

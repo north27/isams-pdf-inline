@@ -1,28 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <title>About North27</title>
   <style>
-  html body {
-    width: 400px;
-  }
-  p {
-  	font-size: 15px;
-  }
+    html, body {
+      width: 400px; /* Defined width for the popup */
+      margin: 0 auto;
+      padding-top: 0px;
+      padding-right: 25px;
+      padding-bottom: 0px;
+      padding-left: 10px;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box; /* Ensures padding is included in the width */
+    }
+    p {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.6;
+    }
+    .btn.custom-btn, .btn.custom-btn:hover {
+      background-color: #95378d; /* Custom North27 color */
+      color: white !important;
+    }
+    /* Update hyperlink styles */
+    a, a:visited {
+    color: #4682b4 !important; /* North27 brand color for links, with !important to ensure it is applied */
+    text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline !important;
+    }
   </style>
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"> 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <script src="js/materialize.min.js" defer></script>
 </head>
 <body>
-  <div class="row">
-	  <div class="col l4 s12">
-        <h5>About North27</h5>
-        <p class="grey-text text-darken-2">North27 is an EdTech Consultancy with a Software Development Team.</p>
-        <p class="grey-text text-darken-2">We have a number of EdTech related services and software solutions, including GSync that integrates iSAMS with Google G Suite, please click below for more info.</p>
-        <a class="btn waves-effect waves-light red lighten-2" target="_blank" href="https://north27.co.uk/isams?utm_source=isams-inline-app">GSync Info</a> <a class="btn waves-effect waves-light red lighten-3" target="_blank" href="https://north27.co.uk?utm_source=isams-inline-app">Contact Us</a>
-        <p class="grey-text text-darken-2">This extension is provided free of charge in support of GDPR, we hope you like it!</p>
-	  </div>
+  <div class="section">
+    <h5>About North27</h5>
+    <p>We've been at the forefront of education technology for over a decade, continually evolving to meet the dynamic needs of the education sector. Our journey has seen us forge strategic partnerships with industry leaders. These alliances empower us to deliver a holistic range of services that seamlessly integrate consultancy, technical services, and bespoke software development.</p>
+    <p>Integration between MIS & Google Workspace, Hubspot, and more: <a href="https://www.gsync.uk/?utm_source=isams-inline-app" target="_blank" rel="noopener noreferrer">GSync</a></p>
+    <p>Complete Cashless Catering System: <a href="https://www.lunchclub.cloud/?utm_source=isams-inline-app" target="_blank" rel="noopener noreferrer">LunchClub</a></p>
+    <p>Digital Signage: <a href="https://www.signogic.co.uk/?utm_source=isams-inline-app" target="_blank" rel="noopener noreferrer">Signogic</a></p>
+    <a class="btn waves-effect custom-btn" href="https://north27.co.uk?utm_source=isams-inline-app" target="_blank" rel="noopener noreferrer">Contact Us</a>
+    <p>This extension is provided free of charge in support of GDPR, we hope you find it useful! Special thanks to iSAMS for their support.</p>
   </div>
+  <!-- Ensure any required initialisation scripts for Materialize are included -->
 </body>
 </html>

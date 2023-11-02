@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "priority": 1,
+      "action": {
+        "type": "modifyHeaders",
+        "responseHeaders": [
+          {
+            "header": "content-disposition",
+            "operation": "set",
+            "value": "inline"
+          }
+        ]
+      },
+      "condition": {
+        "urlFilter": "*://*",
+        "resourceTypes": ["main_frame"],
+        "resquestHeaders": [
+          { "name": "content-type", "value": "application/pdf" }
+        ]
+      }      
+    }
+]
